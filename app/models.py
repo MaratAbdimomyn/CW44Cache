@@ -4,6 +4,8 @@ from django.core.cache import cache
 class Product(models.Model):
     name = models.CharField(max_length=40)
     price = models.IntegerField()
+    country = models.CharField(max_length=40)
+    type = models.CharField(max_length=40)
     
     def __str__(self):
         return self.name
